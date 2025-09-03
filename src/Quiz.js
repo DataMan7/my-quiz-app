@@ -5,39 +5,39 @@ const quizLevels = [
     level: 1,
     questions: [
       {
-        questionText: 'What is the capital of France?',
+        questionText: 'What color is a banana?',
         answerOptions: [
-          { answerText: 'New York', isCorrect: false },
-          { answerText: 'London', isCorrect: false },
-          { answerText: 'Paris', isCorrect: true },
-          { answerText: 'Dublin', isCorrect: false },
+          { answerText: 'Red', isCorrect: false },
+          { answerText: 'Yellow', isCorrect: true },
+          { answerText: 'Blue', isCorrect: false },
+          { answerText: 'Green', isCorrect: false },
         ],
       },
       {
-        questionText: 'Who is CEO of Tesla?',
-        answerOptions: [
-          { answerText: 'Jeff Bezos', isCorrect: false },
-          { answerText: 'Elon Musk', isCorrect: true },
-          { answerText: 'Bill Gates', isCorrect: false },
-          { answerText: 'Tony Stark', isCorrect: false },
-        ],
-      },
-      {
-        questionText: 'The iPhone was created by which company?',
-        answerOptions: [
-          { answerText: 'Apple', isCorrect: true },
-          { answerText: 'Intel', isCorrect: false },
-          { answerText: 'Amazon', isCorrect: false },
-          { answerText: 'Microsoft', isCorrect: false },
-        ],
-      },
-      {
-        questionText: 'How many Harry Potter books are there?',
+        questionText: 'How many wheels does a bicycle have?',
         answerOptions: [
           { answerText: '1', isCorrect: false },
+          { answerText: '2', isCorrect: true },
+          { answerText: '3', isCorrect: false },
           { answerText: '4', isCorrect: false },
-          { answerText: '6', isCorrect: false },
-          { answerText: '7', isCorrect: true },
+        ],
+      },
+      {
+        questionText: 'What do cows drink?',
+        answerOptions: [
+          { answerText: 'Milk', isCorrect: false },
+          { answerText: 'Water', isCorrect: true },
+          { answerText: 'Juice', isCorrect: false },
+          { answerText: 'Soda', isCorrect: false },
+        ],
+      },
+      {
+        questionText: 'What is the color of the sun?',
+        answerOptions: [
+          { answerText: 'Blue', isCorrect: false },
+          { answerText: 'Yellow', isCorrect: true },
+          { answerText: 'Green', isCorrect: false },
+          { answerText: 'Red', isCorrect: false },
         ],
       },
     ],
@@ -218,6 +218,7 @@ function Quiz() {
 
   const currentLevelData = quizLevels[currentLevel];
   const questions = currentLevelData.questions;
+  const totalQuestions = quizLevels.reduce((total, level) => total + level.questions.length, 0);
 
   const handleAnswerOptionClick = (isCorrect, index) => {
     setSelectedAnswer(index);
@@ -269,7 +270,7 @@ function Quiz() {
         <div className='score-section'>
           <h2>Congratulations!</h2>
           <p>You completed all levels!</p>
-          <p>Total Score: {score} out of {quizLevels.length * 4}</p>
+          <p>Total Score: {score} out of {totalQuestions}</p>
           <button onClick={restartQuiz} className="restart-btn">Play Again</button>
         </div>
       ) : (
