@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/dataman/Desktop/R_Projects/my-quiz-app/logs/.6b4ccf2a0637e0a128378ebe4ba3508a405e8118-audit.json",
+    "files": [
+        {
+            "date": 1756933806560,
+            "name": "/home/dataman/Desktop/R_Projects/my-quiz-app/logs/mcp-puppeteer-2025-09-04.log",
+            "hash": "00c7919b22b2600f599050034f5ce1a99beb480721f33ee001d4ab9dee9fa502"
+        }
+    ],
+    "hashType": "sha256"
+}

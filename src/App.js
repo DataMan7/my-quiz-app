@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Quiz from './Quiz';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src="/logo.jpeg" alt="Watoto na Codi Logo" className="logo" />
+        <div className="header-text">
+          <h1>Watoto na Codi</h1>
+          <p>Interactive Quiz for Cognitive Development</p>
+        </div>
       </header>
+      <main>
+        <Quiz />
+      </main>
     </div>
   );
 }
